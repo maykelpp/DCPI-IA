@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="theme-color" content="#07091a"><title>DCPI AI</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><button class="menu" onclick="toggleSettings()">☰</button><div class="brand">✳ DCPI AI</div><div class="avatar">D</div></header>
+<main><section class="welcome"><small>ASISTENTE PERSONAL</small><h1>Hola, ¿en qué<br>puedo ayudarte?</h1><p>Habla conmigo o escribe lo que necesitas.</p></section>
+<div class="orb-wrap"><div class="orb" id="orb"><span>✦</span></div><div id="status">Listo para escucharte</div></div><section id="chat" class="chat"></section></main>
+<footer><button class="mic" onclick="listen()">🎙</button><div class="composer"><input id="prompt" placeholder="Pregúntame lo que quieras..." onkeydown="if(event.key==='Enter')send()"><button onclick="send()">➤</button></div></footer>
+<aside id="settings" class="settings hidden"><h3>Configuración</h3><label>Clave gratuita de Gemini API</label><input id="key" type="password" placeholder="Pega tu API key"><small>Se guarda únicamente en este teléfono. No la publiques.</small><label>Voz de respuesta</label><select id="voice"><option value="female">Femenina</option><option value="male">Masculina</option></select><button onclick="saveSettings()">Guardar</button><button class="secondary" onclick="toggleSettings()">Cerrar</button><p><a href="https://aistudio.google.com/app/apikey" target="_blank">Obtener clave en Google AI Studio</a></p></aside>
+<script src="app.js"></script></body></html>
